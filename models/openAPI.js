@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
-const openAPISchema = new mongoose.Schema({
+const OpenAPISchema = new mongoose.Schema({
+  // _id: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   required: true
+  // },
   create_date: {
     type: String,
     required: true
@@ -25,6 +29,8 @@ const openAPISchema = new mongoose.Schema({
     type: String,
     required: true
   }
+}, {
+  collection: "openAPI"
 });
 
-module.exports = openAPI = mongoose.model("openAPI", openAPISchema);
+module.exports = OpenAPI = mongoose.model("openAPI", OpenAPISchema);
