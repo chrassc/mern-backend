@@ -2,33 +2,31 @@
   "name": "mern-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "lint": "eslint ./",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dboff": "killall mongod",
-    "watch": "nodemon index.js",
-    "dbon": "mkdir -p ./db && mongod --dbpath ./db"
+    "start": "node app.js",
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrassc/mern-backend.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Christopher Choi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chrassc/mern-backend/issues"
   },
   "homepage": "https://github.com/chrassc/mern-backend#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "config": "^3.3.6",
     "express": "^4.17.1",
-    "http-errors": "^1.8.0",
     "mongoose": "^5.12.4",
-    "superagent": "^6.1.0"
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
