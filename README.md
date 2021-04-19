@@ -1,0 +1,3 @@
+change dir
+
+nodemon app
