@@ -5,7 +5,7 @@ const openAPISchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  locationm_id: {
+  location_id: {
     type: String,
     required: true
   },
