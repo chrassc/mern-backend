@@ -1,26 +1,27 @@
 const express = require("express");
 const router = express.Router();
 
-//load openAPI model
-const OpenAPI = require("../../models/OpenAPI");
+//load geoJSON model
+const GeoJSON = require("../../models/GeoJSON");
 
-//@route GET api/openAPI
-//@description GET all openAPI data
+//@route GET api/geoJSON
+//@description GET all geoJSON data
 //@access Public
+
 router.get("/", (req, res) => {
-  console.log('[' + Date(Date.now().toString()).slice(4,29) + "7 (PDT)] from [" + req.ip.slice(7) + "] - openAPI GET requested");
-  OpenAPI.find()
+  console.log('[' + Date(Date.now().toString()).slice(4,29) + "7 (PDT)] from [" + req.ip.slice(7) + "] - geoJSON GET requested");
+  GeoJSON.find()
     .then(data => res.json(data))
     .catch(err => res.status(404).json({noDataFound: "No Data"}));
 });
 
-//@route create api/openAPI
-//@description create new openAPI data
+//@route create api/geoJSON
+//@description create new geoJSON data
 //@access public
 router.post("/", (req, res) => {
-  console.log("openAPI POST requested");
+  console.log("geoJSON POST requested");
   console.log(req.body);
-  OpenAPI.create(req.body)
+  GeoJSON.create(req.body)
     .then(data => res.json({ msg: "data added successfully" }))
     .catch(err => res.status(400).json({error: "unable to add data"}));
 });

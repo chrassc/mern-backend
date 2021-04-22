@@ -11,7 +11,7 @@ const connectDB = async () => {
         useUnifiedTopology: true
       }
     );
-    console.log('MongoDB is Connected...');
+    console.log('[' + Date(Date.now().toString()).slice(4,29) + '7 (PDT)] MongoDB is Connected...');
   } catch (err) {
     console.error(err.message);
     process.exit(1);

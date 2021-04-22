@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const OpenAPISchema = new mongoose.Schema({
-  // _id: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   required: true
-  // },
   create_date: {
     type: String,
     required: true

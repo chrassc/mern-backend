@@ -1,3 +1,3 @@
 change dir
 
-nodemon app
+npm run app
