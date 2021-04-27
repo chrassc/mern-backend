@@ -4,8 +4,9 @@ const connectDB = require("./config/db");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const openAPI = require("./routes/api/openAPI");
+const disasterInfo = require("./routes/api/disasterInfo");
 const geoJSON = require("./routes/api/geoJSON");
+const organizedGeoJSON = require("./routes/api/organizedGeoJSON");
 
 connectDB();
 
@@ -16,8 +17,9 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 //app.use(bodyParser.json());
 
-app.use('/api/openAPI', openAPI);
+app.use('/api/disasterInfo', disasterInfo);
 app.use('/api/geoJSON', geoJSON);
+app.use('/api/organizedGeoJSON', organizedGeoJSON);
 
 const port = process.env.PORT || 8082;
 
